@@ -1,4 +1,4 @@
-
+#!/bin/bash
 set -e
 
 echo "======================"
@@ -26,7 +26,7 @@ sudo udevadm trigger
 echo "======================"
 echo "Install Docker & Docker Compose..."
 echo "----------------------"
-sudo apt update
+sudo apt-get update
 sudo apt-get install -yq \
     apt-transport-https \
     ca-certificates \
@@ -62,3 +62,8 @@ sudo cat <<EOF > /etc/docker/daemon.json
     "insecure-registries": ["192.168.16.205:5000"]
 }
 EOF
+sudo systemctl restart docker.service
+
+echo "======================"
+echo "DONE"
+echo "----------------------"
