@@ -45,7 +45,7 @@
             ```$ sudo netplan apply```
         2. Set the systemd to prevent boot-up delay even if there is no network at startup.
 
-            ```$ systemctl mask systemd-networkd-wait-online.service```
+            ```$ sudo systemctl mask systemd-networkd-wait-online.service```
         3. Restart Raspberry Pi 4
 
             ```$ reboot```
@@ -61,3 +61,18 @@
 6. Start the container
 
     ```$ docker-compose up```
+
+## Trouble Shooting
+
+### Fail when running host.installation.sh
+
+If you encounter
+
+```shell
+crash E: Could not get lock /var/lib/dpkg/lock – open (11: Resource temporarily unavailable)
+E: Unable to lock the administration directory (/var/lib/dpkg/), is another process using it?
+```
+
+There are probably a daily system updating your package. You can check by `ps aux | grep -i apt`.
+
+If there is the daily update, just wait for it complete, and do the remaining task in installation.sh
