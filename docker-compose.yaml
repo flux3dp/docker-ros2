@@ -1,0 +1,8 @@
+version: '2'
+services:
+    ros2:
+        build: 192.168.16.295:5000/docker-ros2:0.0.0
+        devices:
+            - /dev/ttyACM0:/dev/ttyACM0
+            - /dev/ttyUSB0:/dev/ttyUSB0
+        network_mode: host
