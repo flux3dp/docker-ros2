@@ -4,6 +4,7 @@ set -e
 source /opt/ros/dashing/setup.bash
 source ~/turtlebot3_ws/install/setup.bash
 export TURTLEBOT3_MODEL=waffle_pi
+export ROS_DOMAIN_ID=30 #TURTLEBOT3
 
 export OPENCR_PORT=/dev/ttyACM0
 export OPENCR_MODEL=waffle
