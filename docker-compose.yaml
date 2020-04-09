@@ -1,6 +1,7 @@
 version: '2'
 services:
     ros2:
+        # build: .
         image: 192.168.16.205:5000/docker-ros2:0.0.1
         devices:
             - /dev/ttyACM0:/dev/ttyACM0
