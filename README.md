@@ -73,7 +73,7 @@ It is better if you have a private docker registry to pull from pre-build image.
 
 ## Trouble Shooting
 
-### Fail when running host.installation.sh
+### Fail when running host-installation.sh
 
 If you encounter
 
